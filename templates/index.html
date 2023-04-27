@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You Tube</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    
+</head>
+<body>
+    <nav class="flex-div">
+        <div class="nav-left flex-div">
+            <img src="../static/menu.png" class="menu-icon">
+            <img src="../static/logo.png" class="logo">
+        </div>
+        <div class="nav-middle flex-div">
+            <div class="search-box">
+                <form action="" method="POST">
+                    <label for="search" ></label>
+                    <input type="text" name="search" placeholder="search">
+                    <input type="submit" value="" style="background-image: url(../static/search.png); background-repeat: no-repeat; 
+                    position: absolute; left: 865px; background-size: contain;" >
+                    <div class="drop-down">
+                        <table>
+                            <tr>
+                                <th>Search List</th>
+                            </tr>
+                            {%for i in L%}
+                            <tr>
+                                <td>{{i}}</td>
+                            </tr>
+                            {%endfor%}
+                        </table>
+                    </div>
+                </form>
+            </div>
+              <img src="../static/voice-search.png" class="mic-icon">
+        </div>
+        <div class="nav-right flex-div">
+            <img src="../static/upload.png">
+            <img src="../static/more.png" >
+            <img src="../static/notification.png">
+            <img src="../static/jack.png" class="user-icon">
+
+        </div>
+    </nav>
+    <div class="sidebar">
+        <div class="shortcut-links">
+            <a href="#"><img src="../static/home.png" alt=""> <p> Home</p></a>
+            <a href="#"><img src="../static/explore.png" alt=""><p>Explore</p></a>
+            <a href="#"><img src="../static/subscription.png" alt=""><p>Subscription</p></a>
+            <a href="#"><img src="../static/library.png" alt=""><p>Library</p></a>
+            <a href="#"><img src="../static/history.png" alt=""><p>History</p></a>
+            <a href="#"><img src="../static/playlist.png" alt=""><p>Playlist</p></a>
+            <a href="#"><img src="../static/messages.png" alt=""><p>Messages</p></a>
+            <a href="#"><img src="../static/show-more.png" alt=""><p>Show More</p></a>
+        </div>
+        <div class="subscribed-list">
+            <h3>Subscribed</h3>
+            <a href="#"><img src="../static/jack.png" alt=""><p>Python</p></a>
+            <a href="#"><img src="../static/tom.png" alt=""><p>Java</p></a>
+            <a href="#"><img src="../static/simon.png" alt=""><p>Javascript</p></a>
+            <a href="#"><img src="../static/megan.png" alt=""><p>React</p></a>
+            <a href="#"><img src="../static/cameron.png" alt=""><p>C</p></a>
+            <a href="#"><img src="../static/jack.png" alt=""><p>C++</p></a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="banner">
+            <img src="../static/banner.png">
+        </div>
+        <div class="list-container">
+            <div class="vid-list">
+                <a href="{{url_for('video')}}"><img src="../static/thumbnail01.jpg" class="thumbnail"></a>
+                <div class="flex-div">
+                    <img src="../static/jack.png">
+                    <div class="vid-info">
+                        <a href="#">Feel The Nature</a>
+                        <p>Sounds of Nature</p>
+                        <p>1.1M views &bull; 1 day</p>
+                    </div>
+                </div>
+            </div>
+            <div class="vid-list">
+                <a href="{{url_for('zootopia')}}"><img src="../static/thumbnail02.jpeg" class="thumbnail"></a>
+                <div class="flex-div">
+                    <img src="../static/jack.png">
+                    <div class="vid-info">
+                        <a href="#">Welcome to Zootopia</a>
+                        <p>The World of Animals</p>
+                        <p>1.1M views &bull; 1 day</p>
+                    </div>
+                </div>
+            </div>
+            <div class="vid-list">
+                <a href="{{url_for('muruga')}}"><img src="../static/thumbnail03.jpeg" class="thumbnail"></a>
+                <div class="flex-div">
+                    <img src="../static/jack.png">
+                    <div class="vid-info">
+                        <a href="#">Divinity Here</a>
+                        <p>Evergreen Muruga</p>
+                        <p>1.1M views &bull; 1 day</p>
+                    </div>
+                </div>
+            </div>
+            <div class="vid-list">
+                <a href="{{url_for('tamil')}}"><img src="../static/thumbnail04.jpeg" class="thumbnail"></a>
+                <div class="flex-div">
+                    <img src="../static/jack.png">
+                    <div class="vid-info">
+                        <a href="#">Tigers Roaring</a>
+                        <p>Thamilukku amuthendru per</p>
+                        <p>1.1M views &bull; 1 day</p>
+                    </div>
+                </div>
+            </div>
+            <div class="vid-list">
+                <a href="../static/Hakuna matata WhatsApp status.mp4"><img src="../static/thumbnail05.jpeg" class="thumbnail"></a>
+                <div class="flex-div">
+                    <img src="../static/jack.png">
+                    <div class="vid-info">
+                        <a href="#">Hakuna Matata</a>
+                        <p>I'm here ,touch and feel</p>
+                        <p>1.1M views &bull; 1 day</p>
+                    </div>
+                </div>
+            </div>
+            <div class="vid-list">
+                <a href="../static/This Is Life -Best Animation Whatsapp Status.mp4"><img src="../static/thumbnail06.jpeg" class="thumbnail"></a>
+                <div class="flex-div">
+                    <img src="../static/jack.png">
+                    <div class="vid-info">
+                        <a href="#">The sea shore</a>
+                        <p>Take a rest</p>
+                        <p>1.1M views &bull; 1 day</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
